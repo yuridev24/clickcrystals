@@ -6,7 +6,7 @@ import { NavLink } from "./NavLink"
 const downloadDropdown = [
   {
     "label": "Official",
-    "url": "#",
+    "url": "https://clickcrystals.xyz/download",
   },
   {
     "label": "PlanetMinecraft",
