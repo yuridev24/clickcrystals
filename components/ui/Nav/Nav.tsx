@@ -49,10 +49,10 @@ const moreDropdown = [
 ]
 
 export const links = [
-  <NavLink label="Home" url="#" />,
+  <NavLink label="Home" url="#" key={0} />,
   <DropLink label="Download" links={downloadDropdown} url="https://clickcrystals.xyz/download" key={1} />,
-  <NavLink label="Wiki" url="#" />,
-  <DropLink label="More" links={moreDropdown} url="#" />
+  <NavLink label="Wiki" url="#" key={2} />,
+  <DropLink label="More" links={moreDropdown} url="#" key={3} />
 ]
 
 export const Nav = () => {
