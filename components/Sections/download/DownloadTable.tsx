@@ -1,8 +1,7 @@
 "use client"
 
 import { AgGridReact } from 'ag-grid-react';
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-alpine.css";
+import "@/styles/ag-grid-theme.css";
 import { useEffect, useState } from 'react';
 import { getParsedReleases } from '@/lib/getReleases.tsx';
 import { parseNumber } from '@/lib/utils';
@@ -28,7 +27,7 @@ export default function DownloadTable() {
   
 
   const [colDefs, setColDefs] = useState([
-    { field: "version" },
+    { field: "version", pinned: true, movable: false },
     {
       field: "code",
       headerName: "Source Code",
@@ -87,12 +86,13 @@ export default function DownloadTable() {
 
   return (
     <div
-      className="ag-theme-alpine my-4 h-[500px]"
+      className="ag-theme-custom my-4 h-[500px]"
     >
       <AgGridReact
         rowData={rowData}
         columnDefs={colDefs}
         loading={loading}
+        suppressTouch={false}
       />
     </div>
   )

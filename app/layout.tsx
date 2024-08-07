@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/styles/globals.css";
 import { inter, interHeading } from "./fonts";
 import type { Metadata } from "next";
 
