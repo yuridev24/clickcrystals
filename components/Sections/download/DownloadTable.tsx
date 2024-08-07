@@ -11,6 +11,10 @@ export default function DownloadTable() {
   const [loading, setLoading] = useState(true);
   const [colDefs, setColDefs]: any[] = useState();
 
+  const handleGridReady = (params: any) => {
+    params.api.sizeColumnsToFit();
+  }
+
   useEffect(() => {
     setColDefs(
       [
@@ -117,7 +121,7 @@ export default function DownloadTable() {
 
   return (
     <div
-      className="ag-theme-custom my-4 h-[500px]"
+      className="ag-theme-custom my-4 h-[467px]"
     >
       <AgGridReact
         columnDefs={colDefs}
@@ -127,6 +131,7 @@ export default function DownloadTable() {
         pagination={true}
         paginationPageSize={10}
         paginationPageSizeSelector={[10, 20, 30, 50, 100]}
+        onGridReady={handleGridReady}
       />
     </div>
   )
