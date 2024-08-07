@@ -6,6 +6,7 @@ import planetmc from "@/public/icons/planetmc.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { DownloadLink } from "./DownloadLink"
+import DownloadTable from "./DownloadTable"
 
 export default function Download() {
   return (
@@ -18,12 +19,13 @@ export default function Download() {
           <p className="text-gray-500 font-normal max-w-4xl my-3">
             Our official downloads are available on CurseForge, PlanetMC and GitHub. ClickCrystals has been discontinued on Modrinth. Please refrain from downloading ClickCrystals from any other website other than listed here.
           </p>
-          <div className="flex gap-2">
-            <DownloadLink link="#" label="CurseForge" border="#ff7547" bg="#f16436" hoverbg="#df582c" icon={<Image src={curseforge} width={20} height={20} alt="CurseForge" className="size-5 mr-2" />} />
-            <DownloadLink link="#" label="Modrinth" border="#3eb326" bg="#39a822" hoverbg="#2d8a1a" icon={<Image src={modrinth} width={20} height={20} alt="Modrinth" className="size-5 mr-2" />} />
-            <DownloadLink link="#" label="GitHub" border="#3c444b" bg="#202529" hoverbg="#181b1f" icon={<FontAwesomeIcon icon={faGithub} className="size-[20px] mr-2" />} />
-            <DownloadLink link="#" label="PlanetMC" border="#2697b3" bg="#1f86a0" hoverbg="#126377" icon={<Image src={planetmc} width={20} height={20} alt="PlanetMC" className="size-5 mr-2" />} />
+          <div className="flex flex-row gap-2">
+            <DownloadLink link="#" label="CurseForge" className="border-[#ff7547] bg-[#f16436] hover:bg-[#df582c]" icon={<Image src={curseforge} width={24} height={24} alt="CurseForge" className="size-6 md:size-5" />} />
+            <DownloadLink link="#" label="Modrinth" className="border-[#3eb326] bg-[#39a822] hover:bg-[#2d8a1a]" icon={<Image src={modrinth} width={24} height={24} alt="Modrinth" className="size-6 md:size-5" />} />
+            <DownloadLink link="#" label="GitHub" className="border-[#3c444b] bg-[#202529] hover:bg-[#181b1f]" icon={<FontAwesomeIcon icon={faGithub} className="size-6 md:size-5" />} />
+            <DownloadLink link="#" label="PlanetMC" className="border-[#2697b3] bg-[#1f86a0] hover:bg-[#126377]" icon={<Image src={planetmc} width={24} height={24} alt="PlanetMC" className="size-6 md:size-5" />} />
           </div>
+          <DownloadTable />
         </div>
       </div>
     </section>

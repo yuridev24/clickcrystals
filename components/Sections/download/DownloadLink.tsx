@@ -5,17 +5,17 @@ import { Container } from "@/components/ui/Container";
 type DownloadLinkProps = {
   label: string;
   icon: any;
-  border: string;
-  bg: string;
-  hoverbg: string;
+  className?: string;
   link: string;
 }
 
-export const DownloadLink = ({ label, icon, border, bg, hoverbg, link }: DownloadLinkProps) => {
+export const DownloadLink = ({ label, icon, className = '', link }: DownloadLinkProps) => {
   return (
     <Container tapScale={0.95}>
-      <a href={link} className={`btn border-[${border}] bg-[${bg}] hover:bg-[${hoverbg}] text-white font-semibold px-5 py-2.5 shadow-none text-sm`}>
-        {icon} {label}
+      <a href={link} className={`btn text-white font-semibold px-2.5 md:px-5 py-2.5 shadow-none text-sm ${className}`}>
+        {icon} <span className="hidden md:block ml-2">
+          {label}
+        </span>
       </a>
     </Container>
   )
