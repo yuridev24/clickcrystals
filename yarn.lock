@@ -2,6 +2,21 @@
 # yarn lockfile v1
 
 
+"@ag-grid-community/core@^32.0.2":
+  version "32.0.2"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/core/-/core-32.0.2.tgz#58c0ef1bde55c32d576e7f432b3c21d6b14322da"
+  integrity sha512-Pm4KpWuoHtn/eXgzunX0R10TZt6ze3KIz89Q/pzl2ZE+GdEjn6vPmgG+lMb/z90FgFwnMuIOQiz1qk0x5/xaHA==
+  dependencies:
+    ag-charts-types "10.0.2"
+    tslib "^2.3.0"
+
+"@ag-grid-community/react@^32.0.2":
+  version "32.0.2"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/react/-/react-32.0.2.tgz#6bafa0682ec5af3a232020fc47fc000398705eb2"
+  integrity sha512-flvY58sLaOKFR+nOeqqtZrRHyp0p7a5fGdPUSJPdQnF0iK9VhXvGtKQHCkZ/px6qZ8W//OrGeo3bgiHRxa1Rcg==
+  dependencies:
+    prop-types "^15.8.1"
+
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
@@ -2651,7 +2666,7 @@ tsconfig-paths@^3.15.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@^2.4.0:
+tslib@^2.3.0, tslib@^2.4.0:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.3.tgz#0438f810ad7a9edcde7a241c3d80db693c8cbfe0"
   integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
