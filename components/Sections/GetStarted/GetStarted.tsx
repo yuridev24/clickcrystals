@@ -42,7 +42,7 @@ export default function GetStarted() {
           </div>
           <div className="flex flex-row gap-4 justify-center my-4">
             <Container tapScale={0.95}>
-              <a href="#" className="btn border-gray-400 bg-transparent hover:bg-gray-700 hover:text-white font-semibold px-6 px-5.5 py-2.5 shadow-none text-sm">Get ClickCrystals!</a>
+              <a href="https://clickcrystals.xyz/download" className="btn border-gray-400 bg-transparent hover:bg-gray-700 hover:text-white font-semibold px-6 px-5.5 py-2.5 shadow-none text-sm">Get ClickCrystals!</a>
             </Container>
             <Container tapScale={0.95}>
               <a href="#" className="btn border-[#7289da] bg-[#7289da] hover:bg-[#546abb] font-semibold px-6 px-5.5 py-2.5 shadow-none text-white text-sm">Join us now!</a>

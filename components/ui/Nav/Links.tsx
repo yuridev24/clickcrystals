@@ -16,7 +16,7 @@ export const Links = () => {
         </Container>
         <Container className="hidden lg:block">
           <span className="ml-4">
-            <a href="#" className="border-gray-600 bg-transparent hover:bg-gray-600 btn font-semibold md:px-6 ml-2 px-5.5 py-2.5 shadow-none text-sm">Get ClickCrystals!</a>
+            <a href="https://clickcrystals.xyz/download" className="border-gray-600 bg-transparent hover:bg-gray-600 btn font-semibold md:px-6 ml-2 px-5.5 py-2.5 shadow-none text-sm">Get ClickCrystals!</a>
           </span>
         </Container>
       </div>
