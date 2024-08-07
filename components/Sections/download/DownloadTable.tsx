@@ -89,10 +89,13 @@ export default function DownloadTable() {
       className="ag-theme-custom my-4 h-[500px]"
     >
       <AgGridReact
-        rowData={rowData}
         columnDefs={colDefs}
+        rowData={rowData}
         loading={loading}
         suppressTouch={false}
+        pagination={true}
+        paginationPageSize={10}
+        paginationPageSizeSelector={[10, 20, 30, 50, 100]}
       />
     </div>
   )

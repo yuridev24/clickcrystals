@@ -1,3 +1,5 @@
+'use server'
+
 type Assets = {
   v121: null | React.ReactElement;
   v1206: null | React.ReactElement;
