@@ -11,7 +11,7 @@ type DropLinkProps = {
   url: string | undefined;
 }
 
-export const DropLink = ({ label, links, url = undefined }: DropLinkProps) => {
+export const DropLink = ({ label, links, url = "#" }: DropLinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
