@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { getParsedReleases } from '@/lib/getReleases.tsx';
 import { parseNumber } from '@/lib/utils';
 import Downloads from './downloads';
+import Link from 'next/link';
 
 export default function DownloadTable() {
   const [rowData, setRowData] = useState([]);
@@ -25,9 +26,9 @@ export default function DownloadTable() {
           headerName: "Source Code",
           cellRenderer: (params: any) => {
             return (
-              <a href={params.value} className="text-blue-500">
+              <Link href={params.value} className="text-blue-500">
                 Open
-              </a>
+              </Link>
             );
           },
         },
@@ -44,9 +45,9 @@ export default function DownloadTable() {
             return params.value === null ? (
               "Not available"
             ) : (
-              <a href={params.value} className="text-blue-500">
+              <Link href={params.value} className="text-blue-500">
                 Download
-              </a>
+              </Link>
             );
           },
         },
@@ -57,9 +58,9 @@ export default function DownloadTable() {
             return params.value === null ? (
               "Not available"
             ) : (
-              <a href={params.value} className="text-blue-500">
+              <Link href={params.value} className="text-blue-500">
                 Download
-              </a>
+              </Link>
             );
           },
         },
@@ -70,9 +71,9 @@ export default function DownloadTable() {
             return params.value === null ? (
               "Not available"
             ) : (
-              <a href={params.value} className="text-blue-500">
+              <Link href={params.value} className="text-blue-500">
                 Download
-              </a>
+              </Link>
             );
           },
         },
@@ -83,9 +84,9 @@ export default function DownloadTable() {
             return params.value === null ? (
               "Not available"
             ) : (
-              <a href={params.value} className="text-blue-500">
+              <Link href={params.value} className="text-blue-500">
                 Download
-              </a>
+              </Link>
             );
           },
         },
@@ -96,9 +97,9 @@ export default function DownloadTable() {
             return params.value === null ? (
               "Not available"
             ) : (
-              <a href={params.value} className="text-blue-500">
+              <Link href={params.value} className="text-blue-500">
                 Download
-              </a>
+              </Link>
             );
           },
         },
