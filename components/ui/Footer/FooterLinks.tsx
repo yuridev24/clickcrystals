@@ -1,39 +1,40 @@
+import Link from "next/link";
 import FooterInfo from "./FooterInfo";
 
 const footerLinks = [
   {
     title: "Pages",
     links: [
-      { name: "Home", url: "#" },
-      { name: "Downloads", url: "https://clickcrystals.xyz/download" },
-      { name: "Gallery", url: "#" },
-      { name: "Other Projects", url: "#" },
-      { name: "Help", url: "#" }
+      { name: "Home", url: "/" },
+      { name: "Downloads", url: "/download" },
+      { name: "Gallery", url: "https://clickcrystals.xyz/gallery.html" },
+      { name: "Other Projects", url: "https://clickcrystals.xyz/projects.html" },
+      { name: "Help", url: "https://clickcrystals.xyz/faq.html" }
     ]
   },
   {
     title: "Resources",
     links: [
-      { name: "ClickScript Wiki", url: "#" },
-      { name: "Script Formatter", url: "#" },
-      { name: "API Tools", url: "#" }
+      { name: "ClickScript Wiki", url: "https://bit.ly/ccs-wiki" },
+      { name: "Script Formatter", url: "https://clickcrystals.xyz/tools/scriptformatter.html" },
+      // { name: "API Tools", url: "#" }
     ]
   },
   {
     title: "Community",
     links: [
-      { name: "Discord", url: "#" },
-      { name: "GitHub", url: "#" },
-      { name: "YouTube", url: "#" }
+      { name: "Discord", url: "https://discord.gg/zg3ge9VTgr" },
+      { name: "GitHub", url: "https://github.com/clickcrystals-development/ClickCrystals" },
+      { name: "YouTube", url: "https://www.youtube.com/@itzispyder" }
     ]
   },
   {
     title: "Download",
     links: [
-      { name: "PlanetMC", url: "#" },
-      { name: "CurseForge", url: "#" },
-      { name: "GitHub", url: "#" },
-      { name: "Modrinth", url: "#" }
+      { name: "PlanetMC", url: "https://www.planetminecraft.com/mod/clickcrystal/" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/clickcrystals" },
+      { name: "GitHub", url: "https://github.com/clickcrystals-development/ClickCrystals" },
+      { name: "Modrinth", url: "https://modrinth.com/mod/clickcrystals" }
     ]
   }
 ];
@@ -49,7 +50,7 @@ export default function FooterLinks() {
               <ul className="text-white font-medium">
                 {section.links.map((link, linkIndex) => (
                   <li className="mb-4" key={linkIndex}>
-                    <a href={link.url}>{link.name}</a>
+                    <Link href={link.url}>{link.name}</Link>
                   </li>
                 ))}
               </ul>

@@ -1,4 +1,3 @@
-import Content from './Content';
 import FooterLinks from './FooterLinks';
 
 export default function Footer() {

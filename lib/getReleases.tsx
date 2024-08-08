@@ -10,7 +10,16 @@ type Assets = {
 
 export async function getReleases() {
   try {
-    const response = await fetch("https://api.github.com/repos/ItziSpyder/ClickCrystals/releases");
+    const headers = process.env.GITHUB_PAT ? {
+      "Authorization": `Bearer ${process.env.GITHUB_PAT}`
+    } : undefined;
+
+    const options = {
+      method: "GET",
+      headers: headers
+    };
+
+    const response = await fetch("https://api.github.com/repos/ItziSpyder/ClickCrystals/releases", options);
     const releases = await response.json();
     return releases;
   } catch (err) {

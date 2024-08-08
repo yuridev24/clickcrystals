@@ -5,6 +5,7 @@ import "@/styles/ag-grid-theme.css";
 import { useEffect, useState } from 'react';
 import { getParsedReleases } from '@/lib/getReleases.tsx';
 import { parseNumber } from '@/lib/utils';
+import Downloads from './downloads';
 
 export default function DownloadTable() {
   const [rowData, setRowData] = useState([]);
@@ -120,8 +121,11 @@ export default function DownloadTable() {
 
 
   return (
+    <div className="my-4">
+      <Downloads />
+      
     <div
-      className="ag-theme-custom my-4 h-[467px]"
+      className="ag-theme-custom h-[467px]"
     >
       <AgGridReact
         columnDefs={colDefs}
@@ -132,7 +136,10 @@ export default function DownloadTable() {
         paginationPageSize={10}
         paginationPageSizeSelector={[10, 20, 30, 50, 100]}
         onGridReady={handleGridReady}
+        paginationAutoPageSize={true}
+        suppressMenuHide={true}
       />
+    </div>
     </div>
   )
 }

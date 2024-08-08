@@ -6,24 +6,24 @@ import { NavLink } from "./NavLink"
 const downloadDropdown = [
   {
     "label": "Official",
-    "url": "https://clickcrystals.xyz/download",
+    "url": "/download",
   },
   {
     "label": "PlanetMinecraft",
-    "url": "#",
+    "url": "https://www.planetminecraft.com/mod/clickcrystal/",
     "seperate": true
   },
   {
     "label": "CurseForge",
-    "url": "#"
+    "url": "https://www.curseforge.com/minecraft/mc-mods/clickcrystals"
   },
   {
     "label": "GitHub Releases",
-    "url": "#"
+    "url": "https://github.com/clickcrystals-development/ClickCrystals/releases"
   },
   {
     "label": "Modrinth",
-    "url": "#",
+    "url": "https://modrinth.com/mod/clickcrystals",
     "seperate": true
   }
 ]
@@ -31,27 +31,27 @@ const downloadDropdown = [
 const moreDropdown = [
   {
     "label": "Help",
-    "url": "#"
+    "url": "https://clickcrystals.xyz/faq.html"
   },
   {
     "label": "Gallery",
-    "url": "#"
+    "url": "https://clickcrystals.xyz/gallery.html"
   },
-  {
-    "label": "Tools",
-    "url": "#"
-  },
+  // {
+  //   "label": "Tools",
+  //   "url": "#"
+  // },
   {
     "label": "Other Projects",
-    "url": "#",
+    "url": "https://clickcrystals.xyz/projects.html",
     "seperate": true
   },
 ]
 
 export const links = [
-  <NavLink label="Home" url="#" key={0} />,
-  <DropLink label="Download" links={downloadDropdown} url="https://clickcrystals.xyz/download" key={1} />,
-  <NavLink label="Wiki" url="#" key={2} />,
+  <NavLink label="Home" url="/" key={0} />,
+  <DropLink label="Download" links={downloadDropdown} url="/download" key={1} />,
+  <NavLink label="Wiki" url="https://bit.ly/ccs-wiki" key={2} />,
   <DropLink label="More" links={moreDropdown} url="#" key={3} />
 ]
 
